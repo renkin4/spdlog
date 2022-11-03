@@ -9,6 +9,10 @@ project "spdlog"
 
  	files
 	{
+        "src/**.h", 
+        "src/**.hpp", 
+        "src/**.cpp", 
+        "src/**.c", 
         "include/spdlog/src/**.h", 
         "include/spdlog/src/**.hpp", 
         "include/spdlog/src/**.c", 
@@ -19,6 +23,11 @@ project "spdlog"
 	{
 		"include"
 	}
+
+    defines
+    {
+        SPDLOG_COMPILED_LIB
+    }
 
  	filter "system:windows" 
         systemversion "latest"
